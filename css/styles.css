@@ -1,0 +1,426 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* styling header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0px 0px 2px -1px #000;
+    background-color: #fff;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+header #logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12px;
+}
+
+header #song_search {
+    padding: 12px;
+}
+
+header #song_search form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+header #song_search form input {
+    padding: 8px;
+    font-size: 1rem;
+}
+
+header #song_search form #search {
+    outline: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #000;
+    border-right: none;
+}
+
+header #song_search form #searchBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid #000;
+    border-left: none;
+    background-color: #000;
+    padding: 5px 8px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+header #song_search form #searchBtn:hover {
+    opacity: 0.6;
+}
+
+/* styling main section */
+main {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+}
+
+#container1 {
+    width: 30vw;
+    background-color: #fff;
+    transition: left 1s;
+}
+
+#playlistIMG950 {
+    display: none;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+#container1 ul {
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    background-color: whitesmoke;
+    border: 10px solid #fff;
+    border-top: none;
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+#container1 ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    list-style: none;
+    height: fit-content;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px -2px #000;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#container1 ul li>span {
+    padding: 5px;
+    padding-bottom: 2px;
+    border-radius: 50%;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+
+#container1 ul li>span:hover {
+    background-color: #8f8f8f30;
+    box-shadow: 0px 0px 7px -4px #8f8f8ffc;
+}
+
+#container1 ul li div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+#container1 ul li div .dancingBars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.7rem;
+    width: 1.7rem;
+}
+
+#container1 ul li div .dancingBars img {
+    opacity: 1;
+}
+
+
+#container1 ul li div>div {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+#container1 ul li div>div>:first-child {
+    border-bottom: 1px solid black;
+    word-wrap: break-word;
+    text-align: left;
+    word-break: break-all;
+}
+
+#container1 ul li div>div>marquee {
+    width: 100%;
+    background-color: #c9c9c98a;
+}
+
+/* #container1 .heading img */
+
+#container2 {
+    width: 70vw;
+    box-shadow: 0px 0px 2px -1px #000;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+#albumHamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#hamburger {
+    display: none;
+}
+
+/* Albums of songs styling is here */
+#albums {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    padding: 12px;
+    gap: 20px;
+    overflow-y: scroll;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 12px;
+    box-shadow: 0px 0px 3px -1px grey;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    scale: 1.03;
+    box-shadow: 0px 0px 22px -6px #0000006b;
+}
+
+.card>div>h3 {
+    padding: 10px 0;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+}
+
+/* styling seekbar */
+.seekbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+    width: 97%;
+    background: #ffffffff;
+    padding: 12px;
+    border-radius: 10px;
+    position: sticky;
+    bottom: 5px;
+    z-index: 10;
+    box-shadow: 0px 0px 13px -2px #00000042;
+}
+
+.seekbar .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.seekbar .nav #navBtn {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 8px;
+    width: 40%;
+}
+
+.seekbar .nav #navBtn img {
+    padding: 6px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+}
+
+.seekbar .nav #navBtn img:hover {
+    background-color: #0000002d;
+}
+
+.left {
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    transition: background-color 0.5s;
+    padding: 12px;
+}
+
+.seekbar .nav #navBtn .center {
+    display: flex;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s;
+    padding: 12px;
+}
+
+
+
+.seekbar .nav #songName {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 2rem;
+}
+
+.seekbar .nav #songName marquee {
+    background-color: #c9c9c98a;
+    height: 100%;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+.songTime_volumeIcon,
+.volRang_volIcon {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.volRang_volIcon {
+    right: -100%;
+    position: absolute;
+    bottom: 150px;
+    flex-direction: row-reverse;
+    background-color: #fff;
+    rotate: -90deg;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #00000030;
+    transition: all 0.5s ease;
+    padding: 5px 10px 5px 10px;
+    width: fit-content;
+}
+
+.volRang_volIcon input {
+    cursor: pointer;
+}
+
+
+.volRang_volIcon img {
+    rotate: 90deg;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.songTime_volumeIcon img {
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    background-color: #fff;
+    padding: 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.songTime_volumeIcon img:hover,
+#volRang_volIcon img:hover {
+    background-color: #4444441a;
+    box-shadow: 0px 0px 1px 0px #0000004f;
+}
+
+.seekbar .nav #songTime {
+    text-align: right;
+}
+
+.seekbar .bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 0px 0px;
+    cursor: pointer;
+}
+
+.seekbar .bar hr {
+    border: 1px solid;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.seekbar .bar #circle {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    left: 0%;
+    border-radius: 50%;
+    border: 1px solid;
+    background-color: #000;
+    transition: left 0.5s;
+}

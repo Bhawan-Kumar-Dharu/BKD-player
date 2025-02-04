@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
+    <link rel="shortcut icon" href="images/Bkd logo png.png" type="image/x-icon">
+    <title>BKD.player | Best musc player</title>
+
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/Bkd logo png.png" width="100" alt="">
+        </div>
+        <div id="song_search">
+            <form action="">
+                <span id="searchBtn"><img src="images/search.png" alt="" width="25"></span>
+                <input type="search" placeholder="search songs" name="" id="search" required>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div id="container1" class="containers">
+            <div class="heading">
+                <span>Music Library</span>
+                <img src="images/music-player.png" id="playlistIMG" alt="" width="24">
+                <div id="playlistIMG950">
+                    <img src="images/libicon.png" alt="" width="30">
+                    <span id="close"><img src="images/close.png" width="24" alt=""></span>
+                </div>
+            </div>
+            <ul id="songUL">
+
+            </ul>
+        </div>
+        <div id="container2" class="containers">
+            <div class="heading2 heading">
+                <div id="albumHamburger">
+                    <img src="images/hamburger.png" width="24" id="hamburger" alt="">
+                    <span>Playlist</span>
+                </div>
+                <img src="images/playlist.png" alt="" width="24">
+            </div>
+            <div id="albums">
+
+            </div>
+            <div class="seekbar">
+                <div class="nav">
+                    <div id="songName">
+                        ...
+                    </div>
+                    <div id="navBtn">
+                        <img src="images/prev.png" width="25" alt="" id="prev">
+                        <img src="images/play.png  " width="20" alt="" id="play">
+                        <img src="images/next.png" width="25" alt="" id="next">
+                    </div>
+                    <div class="songTime_volumeIcon">
+                        <div id="songTime">00:00 / 00:00</div>
+                        <img src="images/notmute.png" alt="" id="volIcon1" tabindex="0">
+                        <div class="volRang_volIcon" id="volRange_volIcon">
+                            <input type="range" name="" id="volumeRange" value="100">
+                            <img src="images/notmute.png" alt="" id="volIcon2" tabindex="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="bar">
+                    <span id="circle"></span>
+                    <hr id="hr">
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
