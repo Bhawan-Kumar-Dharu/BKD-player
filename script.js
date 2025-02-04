@@ -21,7 +21,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder
-    let a = await fetch(`https://github.com/Bhawan-Kumar-Dharu/BKD-player/tree/main/songs/${folder}/`);
+    let a = await fetch(`https://raw.githubusercontent.com/Bhawan-Kumar-Dharu/BKD-player/main/songs/${folder}/`);
     let text = await a.text();
     let div = document.createElement("div");
     div.innerHTML = text;
@@ -81,7 +81,7 @@ const playMusic = (track, pause = false) => {
 
 
 async function displayAlbums() {
-    let a = await fetch(`https://github.com/Bhawan-Kumar-Dharu/BKD-player/tree/main/songs/`);
+    let a = await fetch(`https://raw.githubusercontent.com/Bhawan-Kumar-Dharu/BKD-player/main/songs/`);
     let text = await a.text();
     let div = document.createElement("div");
     div.innerHTML = text;
@@ -116,7 +116,7 @@ async function displayAlbums() {
 }
 
 async function main() {
-    let a = await fetch(`https://github.com/Bhawan-Kumar-Dharu/BKD-player/tree/main/songs/`);
+    let a = await fetch(`https://raw.githubusercontent.com/Bhawan-Kumar-Dharu/BKD-player/main/songs/`);
     let text = await a.text();
     let div = document.createElement("div");
     div.innerHTML = text;
