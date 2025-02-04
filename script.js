@@ -82,7 +82,8 @@ const playMusic = (track, pause = false) => {
 
 async function displayAlbums() {
     let a = await fetch(`https://raw.githubusercontent.com/Bhawan-Kumar-Dharu/BKD-player/main/songs/`);
-    let text = await a.text();
+    let text = await a.json();
+    console.log(text);
     let div = document.createElement("div");
     div.innerHTML = text;
     let anchors = div.getElementsByTagName("a");
