@@ -21,7 +21,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder
-    let a = await fetch(`http://127.0.0.1:5500/${folder}/`);
+    let a = await fetch(`https://github.com/Bhawan-Kumar-Dharu/BKD-player/tree/main/songs/${folder}/`);
     let text = await a.text();
     let div = document.createElement("div");
     div.innerHTML = text;
@@ -81,7 +81,7 @@ const playMusic = (track, pause = false) => {
 
 
 async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:5500/songs/`);
+    let a = await fetch(`https://github.com/Bhawan-Kumar-Dharu/BKD-player/tree/main/songs/`);
     let text = await a.text();
     let div = document.createElement("div");
     div.innerHTML = text;
@@ -92,7 +92,7 @@ async function displayAlbums() {
         const e = array[index];
         if (e.href.includes("/songs/")) {
             folder = e.href.split("/").slice(-1)[0];
-            let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+            let a = await fetch(`https://github.com/Bhawan-Kumar-Dharu/BKD-player/tree/main/songs/${folder}/info.json`);
             let text = await a.json();
 
             albums.innerHTML = albums.innerHTML + `<div data-folder="${folder}" class="card">
