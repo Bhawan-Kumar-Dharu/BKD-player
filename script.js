@@ -21,7 +21,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder
-    let a = await fetch(`https://raw.githubusercontent.com/Bhawan-Kumar-Dharu/BKD-player/main/songs/${folder}/`);
+    let a = await fetch(`https://raw.githubusercontent.com/Bhawan-Kumar-Dharu/BKD-player/main/${folder}/`);
     let text = await a.text();
     let div = document.createElement("div");
     div.innerHTML = text;
