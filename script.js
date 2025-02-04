@@ -118,7 +118,7 @@ async function displayAlbums() {
 async function main() {
     // this fetching the songs from github direct
     let a = fetch("https://api.github.com/repos/Bhawan-Kumar-Dharu/BKD-player/contents/songs")
-    console.log(a);
+    console.log(a.Response);
     let text = await a.json();
     console.log(text);
     let div = document.createElement("div");
