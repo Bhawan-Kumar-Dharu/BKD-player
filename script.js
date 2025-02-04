@@ -116,7 +116,7 @@ async function displayAlbums() {
 }
 
 async function main() {
-    let a = await fetch(`http://127.0.0.1:5500/songs/`);
+    let a = await fetch(`https://github.com/Bhawan-Kumar-Dharu/BKD-player/tree/main/songs/`);
     let text = await a.text();
     let div = document.createElement("div");
     div.innerHTML = text;
