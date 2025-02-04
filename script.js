@@ -116,7 +116,14 @@ async function displayAlbums() {
 }
 
 async function main() {
-    let a = await fetch(`https://raw.githubusercontent.com/Bhawan-Kumar-Dharu/BKD-player/main/songs/`);
+    // this fetching the songs from github direct
+    let a = fetch("https://api.github.com/repos/Bhawan-Kumar-Dharu/BKD-player/contents/songs", {
+  mode: "cors"
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error("Error:", error));
+    
     let text = await a.text();
     let div = document.createElement("div");
     div.innerHTML = text;
